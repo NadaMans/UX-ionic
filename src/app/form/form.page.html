@@ -1,0 +1,258 @@
+<ion-content>
+    <nav class="nav justify-content-center ">
+        <h1>Registration</h1>
+    </nav>
+
+
+    <form [formGroup]="patientForm" (ngSubmit)="onSubmit()">
+
+        <div class="container">
+                <div class="row">
+                    <label for="first-name" class="form-label" id="label-id"> Name </label>
+                </div>
+                <div class="row">
+                    <input pattern="[a-zA-Z]" required id="name-englsih" type="text" formControlName="nameEnglish" placeholder="Name in english">
+                </div>
+                <div class="row">
+                    <input pattern="[a-zA-Z]" required id="name-arabic" type="text" formControlName="nameArabic" placeholder="Name in arabic">
+                </div>
+         
+
+            <!--GENDER-->
+            <div class="row">
+                
+                    <label for="gender" class="form-label" id="label-id"> Gender </label>
+                </div>
+                <div class="row">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="male">
+                        <label class="form-check-label" for="inlineRadio1">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="female">
+                        <label class="form-check-label" for="inlineRadio2">Female</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="notSpecified">
+                        <label class="form-check-label" for="inlineRadio3">Not Specified</label>
+                    </div>
+                </div>
+            
+
+            <!--Malitary-->
+            <div class="row">
+                <div class="col-2">
+                    <label for="MaterialStatue" class="form-label" id="label-id"> Material Statue </label>
+                </div>
+                <div class="col-3">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="MaterialStatue1" value="single">
+                        <label class="form-check-label" for="inlineRadio1">Single</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="MaterialStatue2" value="married">
+                        <label class="form-check-label" for="inlineRadio2">Married</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="MaterialStatue3" value="none">
+                        <label class="form-check-label" for="inlineRadio3">None</label>
+                    </div>
+                </div>
+            </div>
+
+            <!--DATE-->
+
+            <div class="row">
+                <div class="col-2">
+                    <label for="dateOfBirth" class="form-label"> Date of birth</label>
+                </div>
+                <div class="col-3">
+
+                    <input type="date" id="dateOfBirth" required formControlName="dateOfBirth" name="dateOfBirth">
+
+                </div>
+            </div>
+
+            <!--Nationality-->
+            <div class="row">
+                <div class="col-2">
+                    <label for="nationality" class="form-label" id="label-id"> Nationality</label>
+                </div>
+                <div class="col-3">
+                    <div class="form-group">
+                        <select id="demo_overview" class="form-control" required formControlName="nationality" data-role="select-dropdown">
+                      <option value="">-- select one --</option>
+                      <option value="afghan">Afghan</option>
+                      <option value="albanian">Albanian</option>
+                      <option value="algerian">Algerian</option>
+                      <option value="american">American</option>
+                      <option value="barbudans">Barbudans</option>
+                      <option value="batswana">Batswana</option>
+                      <option value="belarusian">Belarusian</option>
+                      <option value="belgian">Belgian</option>
+                      <option value="ecuadorean">Ecuadorean</option>
+                      <option value="egyptian">Egyptian</option>
+                      <option value="malian">Malian</option>
+                      <option value="venezuelan">Venezuelan</option>
+                      <option value="vietnamese">Vietnamese</option>
+                      <option value="welsh">Welsh</option>
+                      <option value="yemenite">Yemenite</option>
+                      <option value="zambian">Zambian</option>
+                      <option value="zimbabwean">Zimbabwean</option>
+                  </select>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--id-->
+            <div class="row">
+                <div class="col-2">
+                    <label for="id" class="form-label" id="label-id"> ID</label>
+                </div>
+                <div class="col-3">
+
+                    <input type="number" minlength="14" maxlength="14" formControlName="id" id="id" name="id" required placeholder="Enter the 14 number">
+
+                </div>
+            </div>
+            <hr>
+
+            <h4>Adress and contact</h4>
+            <!--country-workphone-->
+            <div class="row">
+                <div class="col-2">
+                    <label for="country" class="form-label" id="label-id">Country</label>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <select id="demo_overview" class="form-control" data-role="select-dropdown">
+                    <option value="">-- select one --</option>
+                    <option value="afghan">Afghan</option>
+                    <option value="albanian">Albanian</option>
+                    <option value="algerian">Algerian</option>
+                    <option value="american">American</option>
+                    <option value="barbudans">Barbudans</option>
+                    <option value="batswana">Batswana</option>
+                    <option value="belarusian">Belarusian</option>
+                    <option value="belgian">Belgian</option>
+                    <option value="ecuadorean">Ecuadorean</option>
+                    <option value="egyptian">Egyptian</option>
+                    <option value="malian">Malian</option>
+                    <option value="venezuelan">Venezuelan</option>
+                    <option value="vietnamese">Vietnamese</option>
+                    <option value="welsh">Welsh</option>
+                    <option value="yemenite">Yemenite</option>
+                    <option value="zambian">Zambian</option>
+                    <option value="zimbabwean">Zimbabwean</option>
+                </select>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <label for="workPhone" class="form-label" id="label-id">Work phone</label>
+                </div>
+                <div class="col-2">
+                    <input type="number" id="workPhone" name="id" formControlName="workPhone" placeholder="work phone">
+                </div>
+            </div>
+            <!--city-mobilephone-->
+            <div class="row">
+                <div class="col-2">
+                    <label for="city" class="form-label" id="label-id">City</label>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <select id="demo_overview" class="form-control" data-role="select-dropdown">
+                    <option value="">-- select one --</option>
+                    <option value="afghan">Afghan</option>
+                    <option value="albanian">Albanian</option>
+                    <option value="algerian">Algerian</option>
+                    <option value="american">American</option>
+                    <option value="barbudans">Barbudans</option>
+                    <option value="batswana">Batswana</option>
+                    <option value="belarusian">Belarusian</option>
+                    <option value="belgian">Belgian</option>
+                    <option value="ecuadorean">Ecuadorean</option>
+                    <option value="egyptian">Egyptian</option>
+                    <option value="malian">Malian</option>
+                    <option value="venezuelan">Venezuelan</option>
+                    <option value="vietnamese">Vietnamese</option>
+                    <option value="welsh">Welsh</option>
+                    <option value="yemenite">Yemenite</option>
+                    <option value="zambian">Zambian</option>
+                    <option value="zimbabwean">Zimbabwean</option>
+                </select>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <label for="city" class="form-label" id="label-id">Mobile phone</label>
+                </div>
+                <div class="col-2">
+                    <input type="number" id="mobilePhone" name="mobilePhone" formControlName="mobilePhone" placeholder="mobile phone">
+                </div>
+            </div>
+            <!--region-homephone-->
+            <div class="row">
+                <div class="col-2">
+                    <label for="city" class="form-label" id="label-id">Region</label>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <select id="demo_overview" class="form-control" data-role="select-dropdown" formControlName="region">
+                    <option value="">-- select one --</option>
+                    <option value="afghan">Afghan</option>
+                    <option value="albanian">Albanian</option>
+                    <option value="algerian">Algerian</option>
+                    <option value="american">American</option>
+                    <option value="barbudans">Barbudans</option>
+                    <option value="batswana">Batswana</option>
+                    <option value="belarusian">Belarusian</option>
+                    <option value="belgian">Belgian</option>
+                    <option value="ecuadorean">Ecuadorean</option>
+                    <option value="egyptian">Egyptian</option>
+                    <option value="malian">Malian</option>
+                    <option value="venezuelan">Venezuelan</option>
+                    <option value="vietnamese">Vietnamese</option>
+                    <option value="welsh">Welsh</option>
+                    <option value="yemenite">Yemenite</option>
+                    <option value="zambian">Zambian</option>
+                    <option value="zimbabwean">Zimbabwean</option>
+                </select>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <label for="homePhone" class="form-label" id="label-id">Home phone</label>
+                </div>
+                <div class="col-2">
+                    <input type="number" id="homePhone" name="homePhone" formControlName="homePhone" placeholder="home phone">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <label for="addresslINE" class="form-label" id="label-id">Address Line</label>
+                </div>
+                <div class="col-4">
+                    <input type="text-area" id="addressLine" name="addressLine" formControlName="addressLine">
+                </div>
+                <div class="col-2">
+                    <label for="email" class="form-label" id="label-id">Email</label>
+                </div>
+                <div class="col-2">
+                    <input type="email" id="email" name="email " formControlName="email" placeholder="valid Email">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-3"></div>
+                <div class="col-6">
+                    <button type="reset" class="btn btn-primary btn-xs">Reset</button>
+                    <button [routerLink]="['/']" class="btn btn-primary btn-xs">Cancel</button>
+                    <button type="submit" class="btn btn-primary btn-xs">Submit</button>
+                </div>
+            </div>
+
+
+        </div>
+    </form>
+</ion-content>

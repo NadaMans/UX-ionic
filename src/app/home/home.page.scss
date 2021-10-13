@@ -1,0 +1,39 @@
+
+h1{
+  text-align: center;
+  margin-top: 10%;
+  font-family: 'Times New Roman', Times, serif;
+  color: #032b67;
+}
+
+
+
+ul{
+  margin: 15px 0px 100px 0px;
+  list-style-type: none;
+  display: inline-block; 
+
+}
+
+li{
+  border: 1px solid rgb(157, 153, 218);
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left:30px ;
+  padding-right:30px ;
+  box-shadow: 5px 5px 5px 0px rgba(170,170,170,0.75);
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(170,170,170,0.75);
+  -moz-box-shadow: 5px 5px 5px 0px rgba(170,170,170,0.75);
+  margin-bottom: 10px;
+  
+  font-size:16px;
+
+ 
+}
+
+.button{
+margin-left: 35%;
+background-color: #5370bb;
+  
+}

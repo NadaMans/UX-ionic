@@ -1,0 +1,10 @@
+<ion-content [fullscreen]="true">
+    <div class="container">
+        <h1>Patient List</h1>
+        <ul>
+            <li *ngFor="let patient of patientList">{{patient.id}}: {{patient.nameEnglish}}</li>
+        </ul>
+        <br>
+        <button routerLink="/form" class="button btn btn-primary">Registration</button>
+    </div>
+</ion-content>
